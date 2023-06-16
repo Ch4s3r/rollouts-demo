@@ -6,7 +6,7 @@ metadata:
   creationTimestamp: null
   name: rollout-demo
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: rollout-demo
@@ -63,5 +63,4 @@ spec:
         - containerPort: 8080
         resources: {}
 status:
-  blueGreen: {}
   canary: {}
