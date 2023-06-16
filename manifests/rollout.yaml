@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   annotations:
-    getambassador.io/rolloutId: f6c19e29-2b27-4244-b338-62c2c38c93f8
+    getambassador.io/rolloutId: b06b0f62-8d2e-4acf-8ff6-f80b96e7fe90
   creationTimestamp: null
   name: rollout-demo
 spec:
@@ -56,7 +56,7 @@ spec:
         app: rollout-demo
     spec:
       containers:
-      - image: traefik/whoami:v1.9
+      - image: traefik/whoami:v1.8
         imagePullPolicy: Always
         name: echo-v1
         ports:
