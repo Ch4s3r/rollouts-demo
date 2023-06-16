@@ -1,9 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
+  annotations:
+    getambassador.io/rolloutId: d2f386d2-52d4-447f-a4fc-08746e2eb383
+  creationTimestamp: null
   name: rollout-demo
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: rollout-demo
@@ -48,6 +51,7 @@ spec:
           - rollout-demo-mapping
   template:
     metadata:
+      creationTimestamp: null
       labels:
         app: rollout-demo
     spec:
@@ -59,4 +63,5 @@ spec:
         - containerPort: 80
         resources: {}
 status:
+  blueGreen: {}
   canary: {}
