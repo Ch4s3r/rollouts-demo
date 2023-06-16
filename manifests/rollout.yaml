@@ -3,7 +3,6 @@ kind: Rollout
 metadata:
   annotations:
     getambassador.io/rolloutId: 5747033d-49a2-4e87-baa4-e8cebd2c679e
-  creationTimestamp: null
   name: rollout-demo
 spec:
   replicas: 2
@@ -51,11 +50,11 @@ spec:
           - rollout-demo-mapping
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: rollout-demo
     spec:
       containers:
+      - args:
         image: ctmagazin/whoami:latest
         imagePullPolicy: Always
         name: echo-v1
