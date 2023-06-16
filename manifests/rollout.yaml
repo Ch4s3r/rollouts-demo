@@ -59,7 +59,7 @@ spec:
         imagePullPolicy: Always
         name: echo-v1
         ports:
-        - containerPort: 8080
+        - containerPort: 80
         resources: {}
 status:
   blueGreen: {}
