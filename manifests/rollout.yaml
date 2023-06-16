@@ -56,9 +56,6 @@ spec:
         app: rollout-demo
     spec:
       containers:
-      - args:
-        - -text=VERSION 1
-        - -listen=:8080
         image: ctmagazin/whoami:latest
         imagePullPolicy: Always
         name: echo-v1
