@@ -1,9 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
+  annotations:
+    getambassador.io/rolloutId: f6c19e29-2b27-4244-b338-62c2c38c93f8
+  creationTimestamp: null
   name: rollout-demo
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: rollout-demo
@@ -48,15 +51,17 @@ spec:
           - rollout-demo-mapping
   template:
     metadata:
+      creationTimestamp: null
       labels:
         app: rollout-demo
     spec:
       containers:
-      - image: traefik/whoami:latest
+      - image: traefik/whoami:v1.9
         imagePullPolicy: Always
         name: echo-v1
         ports:
         - containerPort: 80
         resources: {}
 status:
+  blueGreen: {}
   canary: {}
