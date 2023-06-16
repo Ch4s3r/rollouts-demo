@@ -55,11 +55,11 @@ spec:
     spec:
       containers:
       - args:
-        image: ctmagazin/whoami:latest
+        image: traefik/whoami:latest
         imagePullPolicy: Always
         name: echo-v1
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         resources: {}
 status:
   blueGreen: {}
