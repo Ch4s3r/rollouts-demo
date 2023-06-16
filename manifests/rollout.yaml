@@ -59,7 +59,7 @@ spec:
       - args:
         - -text=VERSION 1
         - -listen=:8080
-        image: hashicorp/http-echo:latest
+        image: containous/whoami:latest
         imagePullPolicy: Always
         name: echo-v1
         ports:
