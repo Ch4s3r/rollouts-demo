@@ -5,5 +5,5 @@ metadata:
 spec:
   resolver: endpoint
   prefix: /rollout-demo
-  rewrite: /echo
+  rewrite: /
   service: rollout-demo:80
