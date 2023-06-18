@@ -1,9 +1,6 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  annotations:
-    getambassador.io/rolloutId: d13ad5c0-4c20-4e5a-8d7b-7d54aaa94323
-  creationTimestamp: null
   name: rollout-demo
 spec:
   replicas: 2
@@ -51,7 +48,6 @@ spec:
           - rollout-demo-mapping
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: rollout-demo
     spec:
